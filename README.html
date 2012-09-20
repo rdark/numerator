@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>numerator.pl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+
+<ul>
+
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<ul>
+
+		<li><a href="#language_choice">LANGUAGE CHOICE</a></li>
+		<li><a href="#known_issues_and_todo">KNOWN ISSUES AND TODO</a></li>
+	</ul>
+
+</ul>
+
+<hr name="index" />
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p>numerator.pl [options]</p>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<dl>
+<dt><strong><a name="help_h" class="item"><strong>--help | -h</strong></a></strong></dt>
+
+<dd>
+<p>Print brief help message and exit</p>
+</dd>
+<dt><strong><a name="filename_f" class="item"><strong>--filename | -f</strong></a></strong></dt>
+
+<dd>
+<p>Filename to pass to numerator</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Richard Clark - &lt;<a href="mailto:richard@fohnet.co.uk">richard@fohnet.co.uk</a>&gt;</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Write a converter to and from Roman numerals.</p>
+<p>The script should read from files specified on the command-line and writing to
+STDOUT.  Each line of input will contain one integer (between 1 and 3999)
+expressed as an Arabic or Roman numeral.  There should be one line of output
+for each line of input, containing the original number in the opposite format.</p>
+<p>Create the test data for the script and include both this and the script output
+along with the script.</p>
+<p>You can chose to write this in any language you choose, please specify the
+reasons for your choice.</p>
+<p>
+</p>
+<h2><a name="language_choice">LANGUAGE CHOICE</a></h2>
+<p>I chose to write this in Perl, both because it's my favourite 'go-to' language
+for most tasks, and because of the vast set of modules available for it,
+thus avoiding wheel reinvention.</p>
+<p>If I were to implement this task without the use of a module I would have
+likely used a hash to match up roman numerals with their arabic values, and
+then performed arithmetic/division in arabic whilst iterating through the hash
+of values.</p>
+<p>
+</p>
+<h2><a name="known_issues_and_todo">KNOWN ISSUES AND TODO</a></h2>
+<p>ASCII charset does not expand beyond 3999; greater than this requires use of
+unicode</p>
+<p>GIven more time I would have audited the code of the Roman module to check what
+data validation is performed, and based on this we could potentially do away
+with the regees in the validate_file subroutine.</p>
+
+</body>
+
+</html>
