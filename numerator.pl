@@ -113,7 +113,7 @@ sub validate_file
              $line =~ /^([1-9][0-9]{0,2}|[1-3][0-9]{3})$/ )
         {
             # strip linebreak and push to array
-            $line =~ s/\n//;
+            chomp($line);
             push (@numbers, $line);
         } else {
             err_sub(1);
